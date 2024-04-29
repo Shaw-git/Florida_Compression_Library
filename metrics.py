@@ -30,17 +30,6 @@ def mean_relative_rmse_error_ornl(x, y):
     minv = np.min(x, axis = 1)
     return np.mean(np.sqrt(mse)/(maxv - minv))
 
-
-def mean_relative_rmse_error_ornl(x, y):
-    """
-    root mean square error: square-root of sum of all (x_i-y_i)**2
-    """
-    assert(x.shape == y.shape)
-    mse = np.mean((x-y)**2)
-    maxv = np.max(x)
-    minv = np.min(x)
-    return np.sqrt(mse)/(maxv - minv)
-
 def relative_l2_error_mgard(x, y):
     """
     root mean square error: square-root of sum of all (x_i-y_i)**2
